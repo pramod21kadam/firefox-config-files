@@ -222,11 +222,3 @@ toolbarbutton#alltabs-button {
 #urlbar-background {
 	display: none !important;
 }
-
-.tab-throbber[busy] { 
-  list-style-image: url("r.gif") !important;
-}
-
-.tab-throbber[progress] {
-list-style-image: url("r.gif") !important;
-}

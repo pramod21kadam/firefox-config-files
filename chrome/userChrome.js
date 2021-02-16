@@ -1,7 +1,7 @@
 
 (function() {
   // IMPORTANT: when there's no filename, be sure to include a trailing slash at the end.
-  const mypage = "file:///home/pramodkadam/.mozilla/firefox/az8tmt7e.default-release/startpage/index.html";
+  const mypage = "file:///home/pramodkadam/System/customization/firefox/startpage/index.html";
   // Don't place the caret in the location bar. Useful if you want a page's search box to have focus instead.
   var removefocus = "no";
   // Clear the page's URL from the location bar. Normally not needed, as this should already be the default behavior.
