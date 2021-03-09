@@ -20,3 +20,6 @@ window.onload = function(){
     }
   }
 }
+document.body.addEventListener("click", function(){
+  document.getElementById("textField").focus();
+});

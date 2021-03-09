@@ -77,8 +77,6 @@ body {
 
 .engine {
   background: none;
-  padding-left: 12px;
-  padding-right: 11px;
   border: none;
   transition-duration: 0.6s;
   position: relative;
@@ -148,11 +146,4 @@ div.bookmarks.mus a:hover {
 
 div.bookmarks.art a:hover {
   color: #FF62CE;
-}
-
-.weather-section{
-  display: flex;
-  align-self: center;
-  font-size: 50px;
-  margin: 10px;
 }
