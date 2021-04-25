@@ -1,55 +1,174 @@
-/*body{
-     background: "red" !important; 
-}*/
+/*================ IMPORT COLORS ================*/
+@import "userColors.css";
 
- @-moz-document url("about:home"),url(about:preferences),url("about:blank"),url("about:newtab"),url("about:privatebrowsing"){
-  body{background-color: #12171D!important;--newtab-search-icon: transparent !important;}
-  a,a:visited,a:hover{color:#12171D!important}
-	#newtab-search-text {
-	background-color: #12171D !important;
-	font-size: 18px !important;
-	color: #9BA8BB !important;
-	box-shadow: none !important;
-	text-align: center !important;
-	border:none !important;
-	font-weight: bold !important;
-		}
+/*================== FIREFOX BG COLOR ==================*/
+@-moz-document url("about:newtab"), url("about:home"), url("about:blank"), url("about:support"), url("about:config") {
+/*Light*/
+html:not(#ublock0-epicker),
+html:not(#ublock0-epicker) body,
+#newtab-customize-overlay {
+	background-color: var(--light_color1) !important;}
+html {--in-content-page-background: var(--light_color1) !important;}
+.wordmark	{fill: #201841 !important;}
+.SnippetBaseContainer	{background-color: var(--light_color2) !important;
+ 	color: var(--other_color3) !important;}
+.ASRouterButton	{border-radius: 3px !important;}
+/*Dark*/
+html:not(#ublock0-epicker)[lwt-newtab-brighttext],
+html:not(#ublock0-epicker) body[lwt-newtab-brighttext],
+#newtab-customize-overlay[lwt-newtab-brighttext] {
+	background-color: var(--dark_color1) !important;}
+html[lwt-newtab-brighttext] {--in-content-page-background: var(--dark_color1) !important;}
+[lwt-newtab-brighttext] .wordmark	{fill: #fefafe !important;}
+[lwt-newtab-brighttext] .SnippetBaseContainer	{background-color: var(--dark_color2) !important;
+ 	color: var(--word_color3) !important;}
+[lwt-newtab-brighttext] .ASRouterButton	{border-radius: 3px !important;}
+}
 
+/*================== SEARCH BAR ==================*/
+/*Light*/
 .search-wrapper input {
-    --newtab-textbox-focus-boxshadow: none !important;
-    padding-left: 20px !important;
-   	padding-inline-end: 13px !important;
+	transition: all 0.3s ease !important;
+    background: var(--light_color2) var(--newtab-search-icon) 12px center no-repeat !important;
+	background-size: 20px !important;
+	border: 1px solid !important;
+	border-color: var(--light_color3) !important;
+	box-shadow: none !important;
+	color: var(--other_color3) !important;
+}
+/*Dark*/
+[lwt-newtab-brighttext] .search-wrapper input {
+	transition: all 0.3s ease !important;
+    background: var(--dark_color2) var(--newtab-search-icon) 12px center no-repeat !important;
+	background-size: 20px !important;
+	border: 1px solid !important;
+	border-color: var(--dark_color3) !important;
+	box-shadow: none !important;
+	color: var(--word_color3) !important;
+}
+/*Light*/
+.search-wrapper .search-inner-wrapper:hover input,
+.search-wrapper .search-inner-wrapper:active input,
+.search-wrapper input:focus {
+	border-color: var(--light_color4) !important;
+}
+/*Dark*/
+[lwt-newtab-brighttext] .search-wrapper .search-inner-wrapper:hover input,
+[lwt-newtab-brighttext] .search-wrapper .search-inner-wrapper:active input,
+[lwt-newtab-brighttext] .search-wrapper input:focus {
+	border-color: var(--dark_color4) !important;
+}
+/*Light*/
+.search-wrapper .search-button,
+.search-wrapper .search-button {
+	transition: all 0.3s ease !important;
+	fill: var(--other_color3) !important;
+}
+/*Dark*/
+[lwt-newtab-brighttext] .search-wrapper .search-button,
+[lwt-newtab-brighttext] .search-wrapper .search-button {
+	transition: all 0.3s ease !important;
+	fill: var(--word_color3) !important;
+}
+/*Light*/
+.search-wrapper .search-button:focus,
+.search-wrapper .search-button:hover {
+    background-color: var(--light_color4) !important;
+}
+/*Dark*/
+[lwt-newtab-brighttext] .search-wrapper .search-button:focus,
+[lwt-newtab-brighttext] .search-wrapper .search-button:hover {
+    background-color: var(--dark_color4) !important;
+}
+
+/*================== READER VIEW ==================*/
+@-moz-document url-prefix("about:reader") {
+	html {
+		background: var(--base_color1);
+	}
+	toolbar > reader-toolbar {
+		border-radius: 3px !important;
+	}
+
+/*Dark*/
+  body.loaded.dark {
+    --toolbar-bgcolor: var(--dark_color2) !important;
+    --toolbar-border: var(--dark_color1) !important;
+    --toolbar-hover: var(--dark_color3) !important;
+    --popup-bgcolor: var(--dark_color2) !important;
+    --popup-border: var(--dark_color3) !important;
+    --font-color: var(--word_color3) !important;
+    --icon-fill: var(--word_color3) !important;
+    background: var(--dark_color1) !important;
+    --blue-40:var(--word_color1) !important;
+    --blue-40-a30:rgba(144,89,255,0.3) !important;
+    --active-color:var(--word_color1) !important;
+}
+/*Light*/
+  body.loaded.light {
+    --toolbar-bgcolor: var(--light_color2) !important;
+    --toolbar-border: var(--light_color1) !important;
+    --toolbar-hover: var(--light_color3) !important;
+    --popup-bgcolor: var(--light_color2) !important;
+    --popup-border: var(--light_color3) !important;
+    --font-color: var(--other_color3) !important;
+    --icon-fill: var(--other_color3) !important;
+    background: var(--light_color1) !important;
+    --blue-40:var(--other_color1) !important;
+    --blue-40-a30:rgba(51,46,86,0.3) !important;
+    --active-color:var(--other_color1) !important;
+
+}
+/*Sepia*/
+  body.loaded.sepia {
+    --toolbar-bgcolor: var(--light_color2) !important;
+    --toolbar-border: var(--light_color1) !important;
+    --toolbar-hover: var(--light_color3) !important;
+    --popup-bgcolor: var(--light_color2) !important;
+    --popup-border: var(--light_color3) !important;
+    --font-color: var(--other_color3) !important;
+    --icon-fill: var(--other_color3) !important;
+    background: var(--light_color1) !important;
+}
+
   }
-  
 
-.search-wrapper .logo-and-wordmark .wordmark {
-  display: none!important;
+  /* Removes white loading page */
+@-moz-document url(about:blank), url(about:newtab), url(about:home) {
+    html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
+      background: var(--mff-bg) !important;
+    }
+  }
+
+
+  /* Hide scrollbar */
+
+  :root{
+    scrollbar-width: none !important;
+  }
+
+
+  @-moz-document url(about:privatebrowsing) {
+
+  :root{
+    scrollbar-width: none !important;
+  }
+  }
+
+/* Change loading background colour */
+
+@namespace url("http://www.w3.org/1999/xhtml");
+
+@-moz-document url("about:home"),url("about:blank"),url("about:newtab"),url("about:privatebrowsing"){
+  body{background-color: rgb(26, 32, 38) !important;}
+}
+@-moz-document("about:privatebrowsing"){
+  .search-handoff-button{ background-color: rgba(100,100,100,0.1) !important; }
+  .fake-textbox{ color: rgb(26, 32, 38) !important } 
 }
 
-.search-wrapper .logo-and-wordmark {
-  margin-bottom: 40px!important;
-  padding-top: 60px!important;
-  filter: saturate(30%) opacity(50%)!important;
-}
-
-
-
-.search-button{background:none !important;}
-
-.prefs-button button {fill: #9BA8BB !important;}
-  
-.prefs-button button:hover, .prefs-button button:focus {
-    background-color:  transparent !important; }	
- 
- .contentSearchSuggestionTable {display: none !important;}
- 
-
-}
-:root {
-	
-    --in-content-border-active: #9BA8BB !important;
-    --in-content-border-active-shadow: none !important;
-    --in-content-page-background: #292D31 !important;
-    scrollbar-color: #292D31 #292D31 !important;
-    scrollbar-width: thin;
+/* About:Addons color fix */
+@-moz-document url-prefix(moz-extension://), url-prefix(about:addons) {
+.inline-options-stack {background-color: #000 !important;}
+label,p,h1,h2,legend,th,pre,span input,span button,label input {color: #fff;}
 }
